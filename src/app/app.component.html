@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- CSS only -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+  <title>Registration Form</title>
+</head>
+<body>
+  <div class="container"></div>
+  <div class="main">
+    <div class="regfrm">
+    <form #myForm="ngForm" (ngSubmit)="onSubmit(myForm.value)">
+      <h2>Registration</h2>
+          <div class="content">
+            <label class="lbl">Name : </label>
+            <input type="text" class="inpt" placeholder="Enter your name" name="name"  [(ngModel)]="userobj.name"  >
+          </div>
+         <span>{{nm}}</span>
+          <div class="content">
+            <label class="lbl">Email :</label>
+            <input type="email" class="inpt" placeholder="Enter your email id" name="email"  [(ngModel)]="userobj.email" >
+          </div>
+          <span>{{em}}</span>
+          <div class="content">
+            <label class="lbl">Password :</label>
+            <input type="password" class="inpt" placeholder="Enter your password" pattern="@" name="password"  [(ngModel)]="userobj.password">
+          </div>
+          <span>{{ps}}</span>
+          <span *ngIf="chklen">{{len}}</span>
+          <div class="content">
+            <label class="lbl">Confirm Password :</label>
+            <input type="password" class="inpt" placeholder="Enter your confirm password" name="cpassword"  [(ngModel)]="userobj.cpassword">
+          </div>
+          <span>{{cps}}</span>
+          <span *ngIf="wrong">{{cpss}}</span>
+          <div class="btn1">
+          <button type="submit" class="btn btn-outline-primary">Submit</button>
+        </div>
+      </form>
+      <div class="btn1">
+      <button class="btn btn-outline-primary" (click)="view()">View</button>
+      </div>
+        </div>
+      </div>
+      <br><br>
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Password</th>
+            <th>Confirm Password</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let item of alluser">
+            <td>
+              {{item.id}}
+            </td>
+            <td>
+              {{item.name}}
+            </td>
+            <td>
+              {{item.email}}
+            </td>
+            <td>
+              {{item.password}}
+            </td>
+            <td>
+              {{item.cpassword}}
+            </td>
+            <td>
+              <button type="button" class="btn btn-warning" (click)="edit(item)">Edit</button>&nbsp;&nbsp;&nbsp;
+              <button type="button" class="btn btn-danger" (click)="delete(item)">Delete</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    
+</body>
+</html>
+<router-outlet></router-outlet>

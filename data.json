@@ -1,0 +1,53 @@
+{
+  "users": [
+    {
+      "name": "ravi",
+      "email": "swapnilsaraiya01@gmail.com",
+      "password": "sonu6310",
+      "cpassword": "kkkkssss",
+      "id": 8
+    },
+    {
+      "name": "vishal",
+      "email": "vishal@gmail.com",
+      "password": "bbbb",
+      "cpassword": "bbbb",
+      "id": 9
+    },
+    {
+      "name": "swapnil saraiya",
+      "email": "swapnilsaraiya01@gmail.com",
+      "password": "12121",
+      "cpassword": "12121",
+      "id": 10
+    },
+    {
+      "name": "swapnil saraiya",
+      "email": "swapnilsaraiya01@gmail.com",
+      "password": "111111",
+      "cpassword": "111111",
+      "id": 11
+    },
+    {
+      "name": "vis",
+      "email": "vishal@gmail.com",
+      "password": "bbbb",
+      "cpassword": "bbbb",
+      "id": 12
+    },
+    {
+      "name": "swapnil saraiya",
+      "email": "swapnilsaraiya01@gmail.com",
+      "password": "11112222",
+      "cpassword": "11112222",
+      "id": 18
+    },
+    {
+      "name": "swapnil saraiya",
+      "email": "swapnilsaraiya01@gmail.com",
+      "password": "22222222",
+      "cpassword": "22222222",
+      "id": 19
+    }
+  ]
+}
